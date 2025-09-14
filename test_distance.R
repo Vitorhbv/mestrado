@@ -1,29 +1,30 @@
 source("distance.R")
 
-cidades <- list(
-  list(nome = "Belo Horizonte, Brasil", coords = c(-19.9191, -43.9386)),
-  list(nome = "Sao Jose dos Campos, Brasil", coords = c(-23.1848, -45.8784)),
-  list(nome = "Manaus, Brasil", coords = c(-3.1301, -60.0234)),
-  list(nome = "Miami, EUA", coords = c(25.7715, -80.1920)),
-  list(nome = "Toquio, Japao", coords = c(35.6812, 139.7619))
+cities <- list(
+  list(name = "Belo Horizonte, Brasil", p = c(-19.9191, -43.9386)),
+  list(name = "Sao Jose dos Campos, Brasil", p = c(-23.1848, -45.8784)),
+  list(name = "Manaus, Brasil", p = c(-3.1301, -60.0234)),
+  list(name = "Miami, EUA", p = c(25.7715, -80.1920)),
+  list(name = "Toquio, Japao", p = c(35.6812, 139.7619))
 )
 
-cat("Distâncias entre cidades (geodésica vs euclidiana) em km:\n\n")
+cat("Distances between cities (geodesic vs euclidean) in kilometers:\n\n")
 
-for (i in seq_len(length(cidades) - 1)) {
-  for (j in seq(i + 1, length(cidades))) {
-    p1 <- cidades[[i]]$coords
-    p2 <- cidades[[j]]$coords
-    nome1 <- cidades[[i]]$nome
-    nome2 <- cidades[[j]]$nome
-    g <- geodesic_distance(p1, p2)
-    e <- euclidean_distance(p1, p2)
+for (i in seq_len(length(cities) - 1)) {
+  for (j in seq((i + 1), length(cities))) {
+    name_city1 <- cities[[i]]$name
+    name_city2 <- cities[[j]]$name
+    p1 <- cities[[i]]$p
+    p2 <- cities[[j]]$p
+    D <- distance$new(p1, p2)
+    geo <- D$geodesic()
+    euc <- D$euclidean()
     cat(sprintf(
-      "%s <-> %s: geodésica=%.2f km, euclidiana=%.2f km\n",
-      nome1,
-      nome2,
-      g,
-      e
+      "%s <-> %s: geodesic=%.2f km, euclidean=%.2f km\n",
+      name_city1,
+      name_city2,
+      geo,
+      euc
     ))
   }
 }
