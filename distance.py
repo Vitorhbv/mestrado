@@ -43,3 +43,4 @@ class distance:
         D = np.linalg.norm(u_1 - u_2)
 
         return D
+
