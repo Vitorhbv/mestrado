@@ -1,0 +1,30 @@
+Bronchial or lung - Female
+Breast - Female
+Bronchial or lung - Male
+Breast - Male
+Stomach - Female
+Prostate - Male
+Cervical - Female
+Esophageal - Female
+Stomach - Male
+Colon - Female
+Rectal - Female
+Stomach with invasive lesion - Female
+Esophageal - Male
+Colon - Male
+Ovarian - Female
+Liver - Female
+Rectal - Male
+Stomach with invasive lesion - Male
+Breast with invasive lesion - Female
+Acute myelogenous leukemia - Female
+Bronchial and lung with invasive lesion - Female
+Pancreatic - Female
+Esophageal with invasive lesion - Female
+Brain, except lobes and ventricles - Female
+Acute lymphoblastic leukemia - Female
+Breast with invasive lesion - Male
+Laryngeal - Female
+Liver - Male
+Acute myelogenous leukemia - Male
+Bronchial and lung with invasive lesion - Male
